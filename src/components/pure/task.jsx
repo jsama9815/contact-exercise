@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import {  Task } from '../../models/task.class'
 
+//Importamos los estilos
+import '../../styles/task.scss';
 
 const TaskComponent = ({ Task }) => {
+
+    useEffect(() => {
+        console.log('Created Task')
+        return () => {
+            console.log(`Task: ${Task.name} is going to unmount`)
+        };
+    }, [Task]);
+
     return (
         <div>
-            <h2>
+            <h2 className='task-name'> 
                 Nombre: { Task.name }
             </h2>
             <h3>
