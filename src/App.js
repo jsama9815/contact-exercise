@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import GreetingStyled from './components/pure/greetingStyled';
+import Clock from './hooks/lifeCycle/clock';
+// import AllCycles from './hooks/lifeCycle/AllCycles';
+// import GreetingStyled from './components/pure/greetingStyled';
 // import Ejemplo4 from './hooks/Ejemplo4';
 // import Ejemplo5 from './hooks/Ejemplo5';
 // import MiComponenteConContexto from './hooks/Ejemplo3';
@@ -10,6 +12,7 @@ import GreetingStyled from './components/pure/greetingStyled';
 // import GreetingF from './components/pure/greetingF';
 // import TaskListComponent from './components/container/task_list';
 // import ContactListComponent  from './components/container/contact';
+// import Example from './hooks/lifeCycle/example.jsx';
 
 function App() {
   return (
@@ -35,7 +38,10 @@ function App() {
             </h3>
           </Ejemplo4> */}
           {/* <Ejemplo5/> */}
-          <GreetingStyled name={'Armando'}></GreetingStyled>
+          {/* <GreetingStyled name={'Armando'}></GreetingStyled> */}
+          {/* <AllCycles></AllCycles> */}
+          {/* <Example></Example> */}
+          <Clock></Clock>
       </header>
     </div>
   );
