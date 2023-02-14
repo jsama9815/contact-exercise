@@ -1,13 +1,11 @@
 export class contact {
     name = '';
     lastName = '';
-    Mail = '';
     status = false;   
 
-    constructor(name, lastName, Mail, status){
+    constructor(name, lastName, status){
         this.name = name;
         this.lastName = lastName;
-        this.Mail = Mail;
         this.status = status;
     }
 }

@@ -1,6 +1,8 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import Clock from './hooks/lifeCycle/clock';
+import ContactList from './components/container/contact_list';
+// import Father from './components/container/father';
+// import Clock from './hooks/lifeCycle/clock';
 // import AllCycles from './hooks/lifeCycle/AllCycles';
 // import GreetingStyled from './components/pure/greetingStyled';
 // import Ejemplo4 from './hooks/Ejemplo4';
@@ -17,8 +19,8 @@ import Clock from './hooks/lifeCycle/clock';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      {/* <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" /> */}
         {/* Componente propio Greeting.jsx  */}
           {/* <Greeting name="Martin"></Greeting> */}
           {/* componente de ejemplo funcional */}
@@ -41,8 +43,12 @@ function App() {
           {/* <GreetingStyled name={'Armando'}></GreetingStyled> */}
           {/* <AllCycles></AllCycles> */}
           {/* <Example></Example> */}
-          <Clock></Clock>
-      </header>
+          {/* <Clock></Clock> */}
+      {/* </header> */}
+          {/* Geston de eventos */}
+          {/* <Father></Father> */}
+          <ContactList></ContactList>
+
     </div>
   );
 }

@@ -1,0 +1,25 @@
+.addBox{
+    background-color: rgb(215, 215, 215);
+    width: 340px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    position: absolute;
+    right: -340px;
+    top: 40px;
+}
+.heading{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+.button_add{
+    position: absolute;
+    bottom: 10px;
+    right: 40px;
+}
