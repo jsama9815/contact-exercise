@@ -19,8 +19,8 @@ const RandomRgb = () => {
     
     return (    
        <div style={{
-        height: '250px',
-        width: '250px',
+        height: '255px',
+        width: '255px',
         backgroundColor: color ? 'black' : (mouse ? colorRgb() : 'black')
        }}
        onMouseEnter = {() => setMouse(true)}
