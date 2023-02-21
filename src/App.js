@@ -1,6 +1,8 @@
 // import logo from './logo.svg';
 import './App.css';
-import ContactList from './components/container/contact_list';
+import RandomRgb from './components/pure/randomRgb';
+// import OptionalRender from './components/pure/optionalRender';
+// import ContactList from './components/container/contact_list';
 // import Father from './components/container/father';
 // import Clock from './hooks/lifeCycle/clock';
 // import AllCycles from './hooks/lifeCycle/AllCycles';
@@ -26,7 +28,6 @@ function App() {
           {/* componente de ejemplo funcional */}
           {/* <GreetingF name={ "Martin" }></GreetingF> */}
           {/* componente de listado de tareas */}
-          {/* <TaskListComponent></TaskListComponent> */}
           {/* Primer ejercicio de prueba */}
           {/* <ContactListComponent></ContactListComponent> */}
           {/* Ejemplos de uso de hooks */}
@@ -47,8 +48,13 @@ function App() {
       {/* </header> */}
           {/* Geston de eventos */}
           {/* <Father></Father> */}
-          <ContactList></ContactList>
-
+          {/* <ContactList></ContactList> */}
+          {/* Ejemplos de renderizado condicional */}
+          {/* <OptionalRender></OptionalRender> */}
+          {/* Ejercicios 10, 11 y 12 */}
+          <RandomRgb></RandomRgb>
+          {/* Proyecto Final */}
+          {/* <TaskListComponent></TaskListComponent> */}
     </div>
   );
 }
