@@ -1,0 +1,31 @@
+label{
+    padding: 15px;
+}
+.fiel_primary{
+    width: 160px;
+    height: 80px;
+}
+.allItems{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    padding: 10px;
+}
+.primary-box{
+    background-color: white;
+    width: 450px;
+    height: 480px;
+}
+.error{
+    color: red;
+}
+#description{
+    width: 300px;
+    height: 80px;
+    text-align: center;
+}
+#name{
+    width: 300px;
+    text-align: center;
+}

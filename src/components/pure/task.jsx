@@ -51,10 +51,21 @@ const TaskComponent = ({ Task, complete, remove }) => {
     else return (<i onClick={() => complete(Task)} className="bi-toggle-off task-action" style={{ color: "grey" }}></i> )
   }
 
+  const taskCompleted = {
+    color:'green',
+    textDecoration: 'line-through'
+  }
+
+  
+  const taskinCompleted = {
+    color: 'tomato',
+    fontWeight: 'bold'
+  }
 
 
   return (
-    <tr className="fw-normal">
+    // eslint-disable-next-line react/jsx-no-duplicate-props
+    <tr className="fw-normal" style = { Task.completed ? taskCompleted : taskinCompleted }>
       <th>
         <span className="ms-2">{Task.name}</span>
       </th>

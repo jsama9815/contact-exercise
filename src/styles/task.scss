@@ -1,3 +1,11 @@
 .task-action{
     cursor: pointer;
 }
+.task-complete{
+    color:green;
+    text-decoration: line-through;
+}
+.task-incomplete{
+    color: tomato;
+    font-weight: bold;
+}

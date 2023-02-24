@@ -1,6 +1,9 @@
 // import logo from './logo.svg';
 import './App.css';
-import RandomRgb from './components/pure/randomRgb';
+import TaskFormik from './components/pure/forms/taskFormik';
+// import RegisterFormik from './components/pure/forms/registerFormik';
+// import LoginFormik from './components/pure/forms/loginFormik';
+// import RandomRgb from './components/pure/randomRgb';
 // import OptionalRender from './components/pure/optionalRender';
 // import ContactList from './components/container/contact_list';
 // import Father from './components/container/father';
@@ -52,7 +55,15 @@ function App() {
           {/* Ejemplos de renderizado condicional */}
           {/* <OptionalRender></OptionalRender> */}
           {/* Ejercicios 10, 11 y 12 */}
-          <RandomRgb></RandomRgb>
+          {/* <RandomRgb></RandomRgb> */}
+
+          {/* Ejemplos de uso de Formik y Yup */}
+          {/* <LoginFormik/> */}
+          {/* <RegisterFormik></RegisterFormik> */}
+          <TaskFormik/>
+
+
+
           {/* Proyecto Final */}
           {/* <TaskListComponent></TaskListComponent> */}
     </div>

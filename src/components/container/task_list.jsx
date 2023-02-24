@@ -16,7 +16,9 @@ const TaskListComponent = () => {
   //Control del ciclo de vida del componente
   useEffect(() => {
     console.log("Task State has been modified");
-    setLoading(false);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
     return () => {
       console.log("TaskList component is going to unmount...");
     };
@@ -43,10 +45,54 @@ const TaskListComponent = () => {
 
   function addTask(Task){
     console.log('Complete this Task:', Task);
-        const index = tasks.indexOf(Task);
         const tempTask = [...tasks];
         tempTask.push(Task);
         setTasks(tempTask);
+  }
+
+  const Table = () => {
+    return(
+  <table>
+    <thead>
+    <tr>
+        <th scope="col">Tittle</th>
+        <th scope="col">Description</th>
+        <th scope="col">Priority</th>
+        <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+        { tasks.map((Task, index) => {
+            return (
+                <TaskComponent
+                key={ index }
+                Task={ Task }
+                complete = { completedTask }
+                remove = { removeTask }
+                >                            
+                </TaskComponent>
+            )
+        } )}
+    </tbody>
+  </table>
+    )
+  }
+
+  let taskTable; 
+
+  if(tasks.length > 0) {
+    taskTable = <Table></Table>
+  }
+  else taskTable = (
+    <div>
+      <h3> There are no tasks to show</h3>
+      <h4>Please, create one</h4>
+    </div>
+  )
+  const loadingStyle = {
+    color: 'grey',
+    fontSize: '30px',
+    fontWeight: 'bold'
   }
 
   return (
@@ -59,32 +105,11 @@ const TaskListComponent = () => {
           </div>
           {/* card body (content) */}
           <div className="card-body"  data-mbd-perfect-scrollbar='true' style={{position: 'relative', height: '400px'}}>
-            <table>
-                <thead>
-                <tr>
-                    <th scope="col">Tittle</th>
-                    <th scope="col">Description</th>
-                    <th scope="col">Priority</th>
-                    <th scope="col">Actions</th>
-                </tr>
-                </thead>
-                <tbody>
-                    { tasks.map((Task, index) => {
-                        return (
-                            <TaskComponent
-                            key={ index }
-                            Task={ Task }
-                            complete = { completedTask }
-                            remove = { removeTask }
-                            >                            
-                            </TaskComponent>
-                        )
-                    } )}
-                </tbody>
-            </table>
+          {/* TODO: Add Loading Spinner */}
+          { loading ? (<p style={ loadingStyle }>loading Tasks...</p>) : taskTable }
           </div>
         </div>
-        <TaskForm add={ addTask }></TaskForm>
+        <TaskForm add={ addTask } length = { tasks.length }></TaskForm>
       </div>
       {/* TODO: Aplicar un for/map para renderizar una lista */}
       {/* <TaskComponent Task={defaultTask}></TaskComponent> */}
